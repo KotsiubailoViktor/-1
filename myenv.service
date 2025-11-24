@@ -1,4 +1,12 @@
 [Unit]
+Description=Service with Environment Variable
+
+[Service]
+ExecStart=/bin/bash -c 'sleep infinity'
+Environment="MY_VARIABLE=HelloWorld"
+
+[Install]
+WantedBy=default.target
 
 [Service]
 

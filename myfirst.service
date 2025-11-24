@@ -1,4 +1,11 @@
 [Unit]
+Description=My First Systemd Service
+
+[Service]
+ExecStart=/bin/bash -c 'sleep infinity'
+
+[Install]
+WantedBy=default.target[Unit]
 
 [Service]
 

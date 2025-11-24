@@ -1,4 +1,12 @@
 [Unit]
+Description=Dependent Service (waits for network)
+After=network.target
+
+[Service]
+ExecStart=/bin/bash -c 'sleep infinity'
+
+[Install]
+WantedBy=default.target[Unit]
 
 [Service]
 

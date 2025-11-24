@@ -1,4 +1,13 @@
 [Unit]
+Description=Service that restarts automatically
+
+[Service]
+ExecStart=/bin/bash -c 'sleep infinity'
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=default.target
 
 [Service]
 
